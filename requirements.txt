@@ -1,0 +1,3 @@
+# librerias LLM - AWS Bedrock.
+boto3
+python-dotenv
