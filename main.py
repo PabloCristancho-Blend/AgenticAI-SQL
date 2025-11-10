@@ -113,7 +113,7 @@ Responde ÚNICAMENTE con la consulta SQL:"""
     
     def procesar_solicitud(self, solicitud: str):
         """Procesa una solicitud completa del usuario"""
-        print(f"\n{Colors.BLUE}🤔 Analizando tu solicitud...{Colors.END}")
+        print(f"\n{Colors.BLUE} Analizando tu solicitud...{Colors.END}")
         
         # Analizar qué necesita hacer
         analisis = self.analizar_solicitud(solicitud)
@@ -122,7 +122,7 @@ Responde ÚNICAMENTE con la consulta SQL:"""
         
         # Paso 1: Ejecutar SQL si es necesario
         if analisis["necesita_sql"]:
-            print(f"{Colors.BLUE}📊 Generando consulta SQL...{Colors.END}")
+            print(f"{Colors.BLUE} Generando consulta SQL...{Colors.END}")
             
             sql = self.generar_sql(solicitud)
             print(f"{Colors.YELLOW}SQL: {sql}{Colors.END}")
@@ -130,7 +130,7 @@ Responde ÚNICAMENTE con la consulta SQL:"""
             resultado_sql = self.sql_tool.execute_query(sql)
             
             if not resultado_sql["success"]:
-                print(f"{Colors.RED}❌ Error en SQL: {resultado_sql['error']}{Colors.END}")
+                print(f"{Colors.RED} Error en SQL: {resultado_sql['error']}{Colors.END}")
                 return
             
             df = resultado_sql["dataframe"]
@@ -145,17 +145,17 @@ Responde ÚNICAMENTE con la consulta SQL:"""
         
         # Paso 2: Crear gráfico si es necesario
         if analisis["necesita_grafico"] and resultado_sql and resultado_sql["success"]:
-            print(f"\n{Colors.BLUE}📈 Generando gráfico...{Colors.END}")
+            print(f"\n{Colors.BLUE} Generando gráfico...{Colors.END}")
             
             df = resultado_sql["dataframe"]
             filepath = self.viz_tool.create_chart(df)
             
             print(f"{Colors.GREEN}✓ Gráfico creado: {filepath}{Colors.END}")
-            print(f"{Colors.YELLOW}💡 Abre con: xdg-open {filepath}{Colors.END}")
+            print(f"{Colors.YELLOW} Abre con: xdg-open {filepath}{Colors.END}")
         
         # Paso 3: Exportar si es necesario
         if analisis["necesita_exportar"] and resultado_sql and resultado_sql["success"]:
-            print(f"\n{Colors.BLUE}💾 Exportando datos...{Colors.END}")
+            print(f"\n{Colors.BLUE} Exportando datos...{Colors.END}")
             
             df = resultado_sql["dataframe"]
             
@@ -165,11 +165,11 @@ Responde ÚNICAMENTE con la consulta SQL:"""
                 filepath = self.export_tool.export_csv(df)
             
             print(f"{Colors.GREEN}✓ Archivo exportado: {filepath}{Colors.END}")
-            print(f"{Colors.YELLOW}💡 Abre con: libreoffice {filepath}{Colors.END}")
+            print(f"{Colors.YELLOW} Abre con: libreoffice {filepath}{Colors.END}")
         
         # Si no necesita nada de lo anterior, dar respuesta general
         if not analisis["necesita_sql"]:
-            print(f"\n{Colors.YELLOW}💡 No detecté una consulta de datos específica.{Colors.END}")
+            print(f"\n{Colors.YELLOW} No detecté una consulta de datos específica.{Colors.END}")
             print(f"{Colors.YELLOW}Intenta preguntas como:{Colors.END}")
             print("  - Top 5 productos más vendidos")
             print("  - Ventas totales por sede con gráfico")
@@ -180,7 +180,7 @@ def print_banner():
     print(f"""
 {Colors.BLUE}{Colors.BOLD}
 ╔════════════════════════════════════════════════════════╗
-║   🤖 AGENTE DE ANÁLISIS DE VENTAS CON AWS BEDROCK 🤖   ║
+║   AGENTE DE ANÁLISIS DE VENTAS CON AWS BEDROCK         ║
 ╚════════════════════════════════════════════════════════╝
 {Colors.END}
 """)
@@ -188,7 +188,7 @@ def print_banner():
 def print_menu():
     """Muestra ejemplos de uso"""
     print(f"""
-{Colors.YELLOW}📋 Ejemplos de preguntas:{Colors.END}
+{Colors.YELLOW} Ejemplos de preguntas:{Colors.END}
 
 {Colors.GREEN}1.{Colors.END} Top 5 productos más vendidos
 {Colors.GREEN}2.{Colors.END} Vendedor con más ventas en Bogotá
@@ -206,12 +206,12 @@ def main():
     print_banner()
     
     # Verificar conexión
-    print(f"{Colors.BLUE}🔍 Verificando AWS Bedrock...{Colors.END}")
+    print(f"{Colors.BLUE} Verificando AWS Bedrock...{Colors.END}")
     try:
         agente = AgenteVentas()
     except Exception as e:
-        print(f"{Colors.RED}❌ Error: {e}{Colors.END}")
-        print(f"{Colors.YELLOW}💡 Verifica tu archivo .env con las credenciales AWS{Colors.END}")
+        print(f"{Colors.RED} Error: {e}{Colors.END}")
+        print(f"{Colors.YELLOW} Verifica tu archivo .env con las credenciales AWS{Colors.END}")
         return
     
     print_menu()
@@ -225,7 +225,7 @@ def main():
                 continue
             
             if solicitud.lower() in ['salir', 'exit', 'quit']:
-                print(f"\n{Colors.YELLOW}👋 ¡Hasta luego!{Colors.END}\n")
+                print(f"\n{Colors.YELLOW} Adios {Colors.END}\n")
                 break
             
             if solicitud.lower() in ['menu', 'ayuda', 'help']:
@@ -242,10 +242,10 @@ def main():
             agente.procesar_solicitud(solicitud)
             
         except KeyboardInterrupt:
-            print(f"\n\n{Colors.YELLOW}👋 Programa interrumpido{Colors.END}\n")
+            print(f"\n\n{Colors.YELLOW} Programa interrumpido{Colors.END}\n")
             break
         except Exception as e:
-            print(f"{Colors.RED}❌ Error: {e}{Colors.END}")
+            print(f"{Colors.RED} Error: {e}{Colors.END}")
 
 if __name__ == "__main__":
     main()
