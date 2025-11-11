@@ -1,3 +1,5 @@
 # librerias LLM - AWS Bedrock.
 boto3
 python-dotenv
+langchain 
+langchain-aws

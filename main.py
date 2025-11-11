@@ -1,4 +1,5 @@
 from Functions.AWS_Bedrock import *
+from Functions.AWS_LangChain import *
 
 def run():
     # Task 0: Welcome message.
@@ -11,9 +12,14 @@ def run():
     user_request = input("Por favor, ingresa tu petición para generar una querry SQL: ")
 
     # Task x: Send AWS-Bedrock the request and get the querry.
-    client, model_id = get_bedrock_client()
-    querry = get_bedrock_response(client, model_id, user_request)
-    
+    #   LLM - AWS Bedrock con LangChain
+    llm = get_bedrock_client()
+    expert_prompt = get_bedrock_prompt()
+    querry = get_bedrock_response(llm, user_request, expert_prompt)
+    print("\nQuerry SQL generada:")
+    print(querry)
+
+
     # Task x: Procesar la solicitud.
 
     # ...
