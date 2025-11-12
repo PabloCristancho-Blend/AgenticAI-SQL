@@ -6,3 +6,5 @@ langchain
 langchain-mcp-adapters
 mcp
 asyncio
+pandas
+matplotlib

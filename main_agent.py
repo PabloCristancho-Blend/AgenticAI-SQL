@@ -10,11 +10,11 @@ async def main():
     
     # 1. Definir configuración de servidores MCP
     client = MultiServerMCPClient({
-        "time-tool": {
+        "sqltest-tool": {
             "transport": "stdio", # Local subprocess communication
             "command": "python",
              # Absolute path to your math_server.py file
-            "args": ["./servers/clock-server.py"],
+            "args": ["./servers/test.py"],
         },
     })
 
@@ -32,7 +32,7 @@ async def main():
 
     # 4. Llamar agente
     response = await agent.ainvoke({
-            "messages": [{"role": "user", "content": "Que hora es en Bogotá?"}]
+            "messages": [{"role": "user", "content": "Consulta todas las ventas y exportar en CSV"}]
         })
 
     # 5. Imprimir resultados con base a si se usaron tools o no.
