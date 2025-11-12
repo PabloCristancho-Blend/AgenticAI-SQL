@@ -17,9 +17,9 @@ def get_db_connection():
 
 
 @mcp.tool()
-def get_todas_ventas() -> str:
+def get_ventas_ventas(top:int) -> str:
     """Devuelve todas las ventas en formato JSON."""
-    query = "SELECT * FROM ventas LIMIT 25;"
+    query = f"SELECT * FROM ventas LIMIT {top};"
     try:
         conn = get_db_connection()
         df = pd.read_sql_query(query, conn)

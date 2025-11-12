@@ -31,8 +31,10 @@ async def main():
         )
 
     # 4. Llamar agente
+    user_input = input("Ingrese su consulta: \n")
+
     response = await agent.ainvoke({
-            "messages": [{"role": "user", "content": "Consulta todas las ventas y exportar en CSV"}]
+            "messages": [{"role": "user", "content": user_input}],
         })
 
     # 5. Imprimir resultados con base a si se usaron tools o no.
