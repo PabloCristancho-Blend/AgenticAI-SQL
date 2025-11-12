@@ -1,5 +1,8 @@
-# librerias LLM - AWS Bedrock.
+# librerias:
 boto3
 python-dotenv
-langchain 
 langchain-aws
+langchain 
+langchain-mcp-adapters
+mcp
+asyncio
