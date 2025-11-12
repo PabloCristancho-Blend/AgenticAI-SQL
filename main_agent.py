@@ -10,11 +10,11 @@ async def main():
     
     # 1. Definir configuración de servidores MCP
     client = MultiServerMCPClient({
-        "sqltest-tool": {
+        "db-sql-tool": {
             "transport": "stdio", # Local subprocess communication
             "command": "python",
              # Absolute path to your math_server.py file
-            "args": ["./servers/test.py"],
+            "args": ["./servers/db_server.py"],
         },
     })
 

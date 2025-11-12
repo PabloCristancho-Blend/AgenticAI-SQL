@@ -43,5 +43,185 @@
     "cantidad":9,
     "precio":626718.12,
     "fecha":"2025-07-29"
+  },
+  {
+    "id":6,
+    "vendedor":"Laura Fernández",
+    "sede":"Cali",
+    "producto":"Mouse Logitech",
+    "cantidad":14,
+    "precio":1832235.0800000001,
+    "fecha":"2025-07-18"
+  },
+  {
+    "id":7,
+    "vendedor":"Laura Fernández",
+    "sede":"Barranquilla",
+    "producto":"Impresora HP",
+    "cantidad":10,
+    "precio":343333.43,
+    "fecha":"2025-09-28"
+  },
+  {
+    "id":8,
+    "vendedor":"Laura Fernández",
+    "sede":"Barranquilla",
+    "producto":"Mouse Logitech",
+    "cantidad":20,
+    "precio":1768641.02,
+    "fecha":"2025-08-17"
+  },
+  {
+    "id":9,
+    "vendedor":"Luis Martínez",
+    "sede":"Bogotá",
+    "producto":"SSD 1TB",
+    "cantidad":15,
+    "precio":788901.28,
+    "fecha":"2025-08-16"
+  },
+  {
+    "id":10,
+    "vendedor":"María López",
+    "sede":"Cali",
+    "producto":"Mouse Logitech",
+    "cantidad":20,
+    "precio":103155.02,
+    "fecha":"2025-08-06"
+  },
+  {
+    "id":11,
+    "vendedor":"Laura Fernández",
+    "sede":"Cali",
+    "producto":"RAM 16GB",
+    "cantidad":3,
+    "precio":581212.88,
+    "fecha":"2025-06-24"
+  },
+  {
+    "id":12,
+    "vendedor":"Laura Fernández",
+    "sede":"Medellín",
+    "producto":"Webcam HD",
+    "cantidad":6,
+    "precio":1128332.1299999999,
+    "fecha":"2025-10-30"
+  },
+  {
+    "id":13,
+    "vendedor":"Carlos Ruiz",
+    "sede":"Bogotá",
+    "producto":"Laptop Dell",
+    "cantidad":14,
+    "precio":881692.73,
+    "fecha":"2025-10-23"
+  },
+  {
+    "id":14,
+    "vendedor":"Sofia Torres",
+    "sede":"Barranquilla",
+    "producto":"Laptop Dell",
+    "cantidad":12,
+    "precio":2323737.52,
+    "fecha":"2025-09-04"
+  },
+  {
+    "id":15,
+    "vendedor":"María López",
+    "sede":"Medellín",
+    "producto":"Laptop Dell",
+    "cantidad":15,
+    "precio":1962244.95,
+    "fecha":"2025-10-15"
+  },
+  {
+    "id":16,
+    "vendedor":"Ana García",
+    "sede":"Medellín",
+    "producto":"Router TP-Link",
+    "cantidad":2,
+    "precio":908932.64,
+    "fecha":"2025-08-05"
+  },
+  {
+    "id":17,
+    "vendedor":"Sofia Torres",
+    "sede":"Bogotá",
+    "producto":"Mouse Logitech",
+    "cantidad":19,
+    "precio":545277.14,
+    "fecha":"2025-09-08"
+  },
+  {
+    "id":18,
+    "vendedor":"Luis Martínez",
+    "sede":"Medellín",
+    "producto":"Laptop Dell",
+    "cantidad":9,
+    "precio":1253471.48,
+    "fecha":"2025-10-06"
+  },
+  {
+    "id":19,
+    "vendedor":"Laura Fernández",
+    "sede":"Barranquilla",
+    "producto":"SSD 1TB",
+    "cantidad":18,
+    "precio":53780.64,
+    "fecha":"2025-08-02"
+  },
+  {
+    "id":20,
+    "vendedor":"Ana García",
+    "sede":"Barranquilla",
+    "producto":"SSD 1TB",
+    "cantidad":15,
+    "precio":368839.03,
+    "fecha":"2025-07-16"
+  },
+  {
+    "id":21,
+    "vendedor":"Juan Pérez",
+    "sede":"Medellín",
+    "producto":"RAM 16GB",
+    "cantidad":14,
+    "precio":1951244.72,
+    "fecha":"2025-10-19"
+  },
+  {
+    "id":22,
+    "vendedor":"Luis Martínez",
+    "sede":"Cali",
+    "producto":"Router TP-Link",
+    "cantidad":9,
+    "precio":2069511.99,
+    "fecha":"2025-08-04"
+  },
+  {
+    "id":23,
+    "vendedor":"María López",
+    "sede":"Barranquilla",
+    "producto":"Laptop Dell",
+    "cantidad":10,
+    "precio":688719.27,
+    "fecha":"2025-08-08"
+  },
+  {
+    "id":24,
+    "vendedor":"Sofia Torres",
+    "sede":"Bogotá",
+    "producto":"Audífonos Sony",
+    "cantidad":14,
+    "precio":1628693.79,
+    "fecha":"2025-08-19"
+  },
+  {
+    "id":25,
+    "vendedor":"Ana García",
+    "sede":"Cali",
+    "producto":"RAM 16GB",
+    "cantidad":3,
+    "precio":1452070.0600000001,
+    "fecha":"2025-08-08"
   }
 ]
